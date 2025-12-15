@@ -11,31 +11,31 @@ import {
 @Entity('users')
 export class User {
   @PrimaryGeneratedColumn('uuid')
-  id: string;
+  id!: string;
 
   @Index({ unique: true })
   @Column()
-  email: string;
+  email!: string;
 
   @Index({ unique: true })
   @Column()
-  phoneNumber: string;
+  phoneNumber!: string;
 
   @Column()
-  passwordHash: string;
+  passwordHash!: string;
 
   @Column({ default: false })
-  isEmailVerified: boolean;
+  isEmailVerified!: boolean;
 
   @Column({ nullable: true })
-  emailVerificationToken: string | null;
+  emailVerificationToken!: string | null;
 
   @Column({ nullable: true })
-  refreshTokenHash: string | null;
+  refreshTokenHash!: string | null;
 
   @CreateDateColumn()
-  createdAt: Date;
+  createdAt!: Date;
 
   @UpdateDateColumn()
-  updatedAt: Date;
+  updatedAt!: Date;
 }
