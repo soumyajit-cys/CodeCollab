@@ -1,8 +1,8 @@
 # app/dashboard/service.py
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func
-from app.users.models import UserProfile
-from app.database.models import UserSession
+from app import UserProfile
+from app import UserSession
 from app.dashboard.schemas import DashboardResponse
 from app.presence.service import get_last_seen
 
